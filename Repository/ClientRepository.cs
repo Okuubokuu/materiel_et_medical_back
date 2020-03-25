@@ -16,7 +16,11 @@ namespace materiel_et_medical.Repository
 
         public IQueryable<Client> Filter(Client model)
         {
-            throw new NotImplementedException();
+            return this.context.Client.Where(client => client.Id == model.Id
+                                        && client.Location == model.Location
+                                        && client.Nom == model.Nom
+                                        && client.Telephone == model.Telephone
+                                        && client.TypeId == model.TypeId);
         }
 
         public IQueryable<Client> FindAll()

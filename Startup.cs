@@ -2,9 +2,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using materiel_et_medical.Models;
+using materiel_et_medical.Repository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -24,6 +27,8 @@ namespace materiel_et_medical
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<MaterielEtMedicalContext>(options => options.UseMySql("server=localhost;port=3306;user=root;password=root;database=material_et_medical_bdd", x => x.ServerVersion("8.0.19-mysql")));
+            services.AddTransient<ClientRepository>();
             services.AddControllers();
         }
 

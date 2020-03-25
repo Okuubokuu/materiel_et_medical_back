@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using materiel_et_medical.Models;
+using materiel_et_medical.Repository;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -12,8 +13,10 @@ namespace materiel_et_medical.Controllers
     [ApiController]
     public class ClientController
     {
-        public ClientController()
+        private ClientRepository repo;
+        public ClientController(ClientRepository context)
         {
+            this.context = context;
         }
         
         public ICollection<Client> findAll()
