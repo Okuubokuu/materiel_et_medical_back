@@ -4,13 +4,13 @@ using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace materiel_et_medical.Models
 {
-    public partial class material_et_medical_bddContext : DbContext
+    public partial class MaterielEtMedicalContext : DbContext
     {
-        public material_et_medical_bddContext()
+        public MaterielEtMedicalContext()
         {
         }
 
-        public material_et_medical_bddContext(DbContextOptions<material_et_medical_bddContext> options)
+        public MaterielEtMedicalContext(DbContextOptions<MaterielEtMedicalContext> options)
             : base(options)
         {
         }
