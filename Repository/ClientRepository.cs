@@ -21,17 +21,15 @@ namespace materiel_et_medical.Repository
 
         public IQueryable<Client> FindAll()
         {
+            // SELECT * FROM client;
             return this.context.Client.Select(client => client);
         }
 
-        public IEnumerable<Client> FindByID()
+        public Client FindByID(int id)
         {
-            throw new NotImplementedException();
-        }
-
-        public IQueryable<Client> Remove(int id)
-        {
-            throw new NotImplementedException();
+            return this.context.Client
+                .Where(client => client.Id == id)
+                .First();
         }
 
         public Client Save(Client model)
@@ -40,6 +38,11 @@ namespace materiel_et_medical.Repository
         }
 
         public Client Update(Client model)
+        {
+            throw new NotImplementedException();
+        }
+
+        void CrudRepository<Client>.Remove(int id)
         {
             throw new NotImplementedException();
         }

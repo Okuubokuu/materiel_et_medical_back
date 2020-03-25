@@ -18,12 +18,12 @@ namespace materiel_et_medical.Repository
             throw new NotImplementedException();
         }
 
-        public IEnumerable<Location> FindByID()
+        public Location FindByID(int id)
         {
             throw new NotImplementedException();
         }
 
-        public IQueryable<Location> Remove(int id)
+        public void Remove(int id)
         {
             throw new NotImplementedException();
         }

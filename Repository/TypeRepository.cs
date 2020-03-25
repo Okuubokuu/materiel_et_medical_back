@@ -3,10 +3,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Type = materiel_et_medical.Models.Type;
 
 namespace materiel_et_medical.Repository
 {
-    public class TypeRepository : CrudRepository<Models.Type>
+    public class TypeRepository : CrudRepository<Type>
     {
         private MaterielEtMedicalContext context;
         public TypeRepository(MaterielEtMedicalContext context)
@@ -29,7 +30,12 @@ namespace materiel_et_medical.Repository
             throw new NotImplementedException();
         }
 
-        public IQueryable<Models.Type> Remove(int id)
+        public Type FindByID(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Remove(int id)
         {
             throw new NotImplementedException();
         }

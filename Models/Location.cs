@@ -3,9 +3,8 @@ using System.Collections.Generic;
 
 namespace materiel_et_medical.Models
 {
-    public partial class Location
+    public partial class Location : Model
     {
-        public int Id { get; set; }
         public int? Duree { get; set; }
         public int ClientId { get; set; }
         public int MaterielId { get; set; }

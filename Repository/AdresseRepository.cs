@@ -23,6 +23,11 @@ namespace materiel_et_medical.Repository
             throw new NotImplementedException();
         }
 
+        public Adresse FindByID(int id)
+        {
+            throw new NotImplementedException();
+        }
+
         public IQueryable<Adresse> Remove(int id)
         {
             throw new NotImplementedException();
@@ -34,6 +39,11 @@ namespace materiel_et_medical.Repository
         }
 
         public Adresse Update(Adresse model)
+        {
+            throw new NotImplementedException();
+        }
+
+        void CrudRepository<Adresse>.Remove(int id)
         {
             throw new NotImplementedException();
         }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace materiel_et_medical.Models
 {
-    public partial class Client
+    public partial class Client : Model
     {
         public Client()
         {
@@ -11,7 +11,6 @@ namespace materiel_et_medical.Models
             Location = new HashSet<Location>();
         }
 
-        public int Id { get; set; }
         public string CodeClient { get; set; }
         public string Nom { get; set; }
         public int? Telephone { get; set; }

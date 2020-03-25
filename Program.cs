@@ -18,14 +18,10 @@ namespace materiel_et_medical
             //CreateHostBuilder(args).Build().Run();
             MaterielEtMedicalContext context = new MaterielEtMedicalContext();
 
-            ClientRepository cRepo = new ClientRepository(context);
+            //ClientRepository cRepo = new ClientRepository(context);
+            CrudRepository<Client> crudclient = new CrudSQLRepository<Client>(context);
 
-            var clients = cRepo.FindAll();
-
-            foreach(var client in clients)
-            {
-                Console.WriteLine(client);
-            }
+            crudclient.FindAll();
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>

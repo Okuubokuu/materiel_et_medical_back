@@ -3,14 +3,13 @@ using System.Collections.Generic;
 
 namespace materiel_et_medical.Models
 {
-    public partial class Materiel
+    public partial class Materiel : Model
     {
         public Materiel()
         {
             Location = new HashSet<Location>();
         }
 
-        public int Id { get; set; }
         public string Reference { get; set; }
         public string Designation { get; set; }
         public DateTime? DateAchat { get; set; }
